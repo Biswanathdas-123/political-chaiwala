@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Political Chaiwala, Medinipur — tea, coffee, shakes, lassi, snacks and good conversations.">
+<title>Political Chaiwala | Medinipur</title>
+<style>
+:root{
+  --bg:#0d0907; --card:#17100c; --gold:#e8a83e; --cream:#fff1d8;
+  --muted:#cbb9a3; --line:rgba(232,168,62,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+nav{position:sticky;top:0;z-index:20;background:rgba(13,9,7,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.5px}
+.brand img{width:48px;height:48px;object-fit:contain;border-radius:10px}
+.brand span{font-size:20px}.brand b{color:var(--gold)}
+.links{display:flex;gap:24px;color:#eadbc6;font-size:14px}
+.links a:hover{color:var(--gold)}
+.hero{max-width:1150px;margin:auto;padding:70px 22px 55px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+.badge{display:inline-block;border:1px solid var(--line);padding:7px 13px;border-radius:999px;color:var(--gold);font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(46px,7vw,82px);line-height:.93;letter-spacing:-3px;margin-bottom:22px}
+h1 span{color:var(--gold)}
+.hero p{font-size:19px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:13px 20px;border-radius:10px;font-weight:700;border:1px solid var(--line);display:inline-block}
+.btn.primary{background:var(--gold);color:#1b1005;border-color:var(--gold)}
+.btn:hover{transform:translateY(-1px)}
+.hero-photo{position:relative}
+.hero-photo img{width:100%;height:440px;object-fit:cover;border-radius:24px;border:1px solid var(--line);box-shadow:0 25px 80px rgba(0,0,0,.45)}
+.stats{max-width:1150px;margin:0 auto 65px;padding:0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stat{background:var(--card);border:1px solid var(--line);padding:20px;border-radius:16px}
+.stat strong{display:block;font-size:28px}.stat small{color:var(--muted)}
+section{max-width:1150px;margin:auto;padding:65px 22px}
+.kicker{color:var(--gold);font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:40px;margin:7px 0 12px}.lead{color:var(--muted);max-width:700px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about img{height:390px;width:100%;object-fit:cover;border-radius:20px}
+.info-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px}
+.info-card p{color:var(--muted);margin:12px 0}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:28px}
+.menu-photo{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#111}
+.menu-photo img{width:100%;height:100%;object-fit:cover;min-height:430px}
+.menu-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px}
+.item span{display:block;color:var(--muted);font-size:13px}.item strong{color:var(--gold);font-size:18px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}
+.gallery img{height:260px;width:100%;object-fit:cover;border-radius:18px;border:1px solid var(--line)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:28px}
+.review{background:var(--card);border:1px solid var(--line);padding:22px;border-radius:18px}
+.stars{color:var(--gold);font-size:18px}.review p{color:var(--muted);margin-top:10px}
+.visit{background:linear-gradient(135deg,#21140c,#120b08);border:1px solid var(--line);border-radius:25px;padding:35px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.contact p{color:var(--muted);margin:10px 0}
+footer{border-top:1px solid var(--line);padding:28px 22px;text-align:center;color:#9f907e;font-size:13px}
+@media(max-width:800px){
+ .links{display:none}.hero,.about,.menu-grid,.visit{grid-template-columns:1fr}
+ .hero{padding-top:45px}.hero-photo img{height:320px}
+ .stats{grid-template-columns:1fr}.gallery,.review-grid{grid-template-columns:1fr}
+ h2{font-size:32px}.menu-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
 
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#home">
+      <img src="assets/logo.png" alt="Political Chaiwala logo">
+      <span>POLITICAL <b>CHAIWALA</b></span>
+    </a>
+    <div class="links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#visit">Visit Us</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <div class="badge">☕ MEDINIPUR • WEST BENGAL</div>
+    <h1>POLITICAL<br><span>CHAIWALA</span></h1>
+    <p>A taste of democracy in every cup. Great tea, tasty food and conversations that bring people together.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#menu">Explore Menu</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Political+Chaiwala%2C+Ashoknagar%2C+Near+Ashoknagar+Rail+Gate%2C+VU+Road%2C+Midnapore%2C+West+Bengal+721101">Get Directions ↗</a>
+      <a class="btn" href="tel:+917908716244">Call Now</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/917908716244?text=Hello%20Political%20Chaiwala">WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-photo"><img src="assets/storefront.jpg" alt="Political Chaiwala storefront"></div>
+</section>
+
+<div class="stats">
+  <div class="stat"><strong>4.7 ★</strong><small>Google Rating</small></div>
+  <div class="stat"><strong>125+</strong><small>Google Reviews</small></div>
+  <div class="stat"><strong>₹1–200</strong><small>Price Range</small></div>
+</div>
+
+<section id="about">
+  <div class="about">
+    <img src="assets/interior.jpg" alt="Inside Political Chaiwala">
+    <div class="info-card">
+      <div class="kicker">Our Story</div>
+      <h2>A cup of tea, a lot of conversation.</h2>
+      <p>Political Chaiwala is a local cafe in Medinipur built around tea, food, friendly service and memorable conversations.</p>
+      <p>Come for the chai, stay for the vibe — and enjoy a pocket-friendly cafe experience.</p>
+      <a class="btn primary" href="#visit">Plan Your Visit</a>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="kicker">Fresh & Pocket Friendly</div>
+  <h2>Our Menu</h2>
+  <p class="lead">Popular items and prices from the cafe's menu board. Ask the cafe for current availability and latest pricing.</p>
+  <div class="menu-grid">
+    <div class="menu-photo"><img src="assets/menu.jpg" alt="Political Chaiwala menu board"></div>
+    <div class="menu-list">
+      <div class="item"><span>Tea</span><strong>Regular Tea — ₹7</strong></div>
+      <div class="item"><span>Tea</span><strong>Black Tea — ₹5</strong></div>
+      <div class="item"><span>Coffee</span><strong>Regular Coffee — ₹10</strong></div>
+      <div class="item"><span>Coffee</span><strong>Black Coffee — ₹5</strong></div>
+      <div class="item"><span>Cold Drinks</span><strong>Cold Coffee — ₹30</strong></div>
+      <div class="item"><span>Lassi</span><strong>Mango Lassi — ₹33</strong></div>
+      <div class="item"><span>Shakes</span><strong>Milk Shake — ₹45</strong></div>
+      <div class="item"><span>More</span><strong>Ask at the cafe</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="kicker">Inside Political Chaiwala</div>
+  <h2>Gallery</h2>
+  <p class="lead">A glimpse of the Political Chaiwala vibe.</p>
+  <div class="gallery">
+    <img src="assets/storefront.jpg" alt="Political Chaiwala outside view">
+    <img src="assets/interior.jpg" alt="Political Chaiwala interior">
+    <img src="assets/logo.png" alt="Political Chaiwala logo">
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="kicker">What People Say</div>
+  <h2>Customer Reviews</h2>
+  <div class="review-grid">
+    <div class="review"><div class="stars">★★★★★</div><p>“Good quality food with great service and ambience 😊”</p></div>
+    <div class="review"><div class="stars">★★★★★</div><p>“Very good behaviour of owner and it's a family friendly restaurant.”</p></div>
+    <div class="review"><div class="stars">★★★★★</div><p>“Great customer service and very friendly people.”</p></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="visit">
+    <div>
+      <div class="kicker">Come Say Hello</div>
+      <h2>Visit Political Chaiwala</h2>
+      <div class="contact">
+        <p>📍 Ashoknagar, Near Ashoknagar Rail Gate, VU Road, Midnapore, West Bengal 721101</p>
+        <p>📞 +91 79087 16244</p>
+        <p>🕐 Check current opening hours before visiting.</p>
+      </div>
+    </div>
+    <div class="buttons" style="align-content:center">
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Political+Chaiwala%2C+Ashoknagar%2C+Near+Ashoknagar+Rail+Gate%2C+VU+Road%2C+Midnapore%2C+West+Bengal+721101">📍 Open in Google Maps</a>
+      <a class="btn" href="tel:+917908716244">📞 Call</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/917908716244?text=Hello%20Political%20Chaiwala">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Political Chaiwala • Medinipur, West Bengal
+</footer>
+</body>
+</html>
